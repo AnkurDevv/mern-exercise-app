@@ -38,7 +38,7 @@ export default class CreateExercise extends Component {
         if (response.data.length > 0) {
           this.setState({
             users: response.data.map(user => user.username),
-            username: response.data[0].username
+            username: response.data[0], username
           })
         }
       })

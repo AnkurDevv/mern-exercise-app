@@ -33,15 +33,10 @@ export default class CreateExercise extends Component {
   // A react lifecycle method 
   //This one is called right before the component is displayed   
   componentDidMount() {
-    axios.get("http://localhost:3000/users/")
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
-          })
-        }
-      })
+    this.setState({
+      users: ['test user'],
+      username: 'test user'
+    })
   }
 
   onChangeUsername(e) {
